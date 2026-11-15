@@ -187,7 +187,7 @@ const binaryString = atob(BASE64_MODEL);
 const bytes = new Uint8Array(binaryString.length);
 for (let i = 0; i < binaryString.length; i++) { bytes[i] = binaryString.charCodeAt(i); }
 const blob = new Blob([bytes], { type: 'model/gltf-binary' });
-const MODEL_URL = URL.createObjectURL(blob);
+const MODEL_URL = 'https://raw.githubusercontent.com/m39463664-ship-it/my-fps-game/main/model.glb';
 
 const loader = new GLTFLoader();
 loader.load(MODEL_URL, (gltf) => {
